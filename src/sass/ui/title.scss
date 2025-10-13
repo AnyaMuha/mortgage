@@ -1,0 +1,66 @@
+@use "/src/sass/base/mixins.scss" as *;
+
+.t-h1 {
+  @include title;
+  font-size: 62px;
+}
+
+.t-h2 {
+  @include title;
+  font-size: 56px;
+}
+
+.t-h3 {
+  @include title;
+  font-size: 48px;
+}
+
+.t-body {
+  @include descr;
+  font-size: 34px;
+}
+
+@media (max-width: 1440px) {
+  .t-h1 {
+    font-size: 48px;
+  }
+  .t-h2 {
+    font-size: 36px;
+  }
+  .t-h3 {
+    font-size: 28px;
+  }
+  .t-body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .t-h1 {
+    font-size: 38px;
+  }
+  .t-h2 {
+    font-size: 30px;
+  }
+  .t-h3 {
+    font-size: 22px;
+  }
+  .t-body {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 360px) {
+  .t-h1 {
+    font-size: 30px;
+  }
+  .t-h2 {
+    font-size: 25px;
+  }
+  .t-h3 {
+    font-size: 17px;
+  }
+  .t-body {
+    font-size: 10px;
+  }
+}

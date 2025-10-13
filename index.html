@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <meta name="description" content="mortgage" />
+    <meta name="author" content="Ana" />
+    <link rel="icon" type="image/x-icon" href="/src//favicon-32x32.png" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="container">
+        <div class="hero__content">
+          <div class="hero__left">
+            <%- include('src/templates/menu.html') %>
+            <div class="hero__fill"></div>
+            <div class="hero__media">
+              <img src="/src/img/bg_cat.png" alt="bg_cat" class="hero__img" />
+              <div class="hero__overlay">
+                <h2 class="hero__subtitle t-h2">
+                  Why a mortgage is so much more than just a rate?
+                </h2>
+
+                <div class="hero__player">
+                  <a
+                    href="https://youtu.be/KnkDoy_TCiM?si=5NXhyFLYRuh6QtBm"
+                    class="hero__player"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><button
+                      class="hero__play-btn btn--round"
+                      type="button"
+                      aria-label="Play video"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="11"
+                        height="16"
+                        viewBox="0 0 11 16"
+                        aria-hidden="true"
+                      >
+                        <path d="M11 8L0 16V0L11 8Z" fill="white" />
+                      </svg></button
+                  ></a>
+                  <time class="hero__time" datetime="PT34S">0:34</time>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__right">
+            <img
+              src="/src/img/logo/logo__main.svg"
+              alt="main-logo"
+              class="hero__logo"
+            />
+
+            <h1 class="hero__title t-h1">
+              Finding a mortgage is so <br /><span>much more</span> than
+              <span>just a rate</span>
+            </h1>
+
+            <div class="hero__note">
+              <p>
+                Rates change, but every mortgage journey starts with a
+                relationship.
+              </p>
+              <p>(Pssst...it’s not just about clicking a button)</p>
+            </div>
+
+            <div class="hero__divider"></div>
+
+            <div class="hero__actions">
+              <p class="hero__actions-text t-body">
+                Let us help you create <br />your mortgage journey
+              </p>
+
+              <div class="hero__buttons">
+                <a href="#"
+                  ><button class="hero__btn btn--primary">
+                    Get started
+                    <img
+                      src="/src/img/icons/icon__arrow.svg"
+                      alt=""
+                      class="btn__icon"
+                    /></button
+                ></a>
+
+                <a href="#"
+                  ><button class="hero__btn btn--transparent">
+                    Schedule a time
+                  </button></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <script type="module" src="/src/js/script.js"></script>
+  </body>
+</html>

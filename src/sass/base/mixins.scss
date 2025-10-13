@@ -1,0 +1,53 @@
+@use "/src/sass/base/variables.scss" as *;
+
+@mixin title {
+  color: $black;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px;
+}
+
+@mixin descr {
+  color: $dark-black;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+@mixin fluid-font($min, $middle, $max) {
+  font-size: clamp(
+    #{$min},
+    calc(
+      #{$middle} + (#{$max} - #{$middle}) * ((100vw - 1440px) / (1920 - 1440))
+    ),
+    #{$max}
+  );
+}
+
+@mixin button {
+  border-radius: 4px;
+  background: $blue;
+  text-align: center;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+}
+
+@mixin button-round {
+  width: 44px;
+  height: 44px;
+  border-radius: 100%;
+  background: $blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+}
