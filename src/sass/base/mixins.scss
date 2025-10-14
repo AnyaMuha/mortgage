@@ -25,17 +25,19 @@
 }
 
 @mixin button {
-  border-radius: 4px;
-  background: $blue;
-  text-align: center;
-  display: flex;
-  padding: 10px;
-  justify-content: center;
+  display: inline-flex;
   align-items: center;
   gap: 10px;
-  align-items: center;
-  cursor: pointer;
+  padding: 10px 20px;
   border: none;
+  border-radius: 4px;
+  background: $blue;
+  color: #fff; // ← и текст, и стрелка (через currentColor)
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 @mixin button-round {

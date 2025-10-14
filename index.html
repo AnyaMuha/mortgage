@@ -6,17 +6,18 @@
     <title>Home</title>
     <meta name="description" content="mortgage" />
     <meta name="author" content="Ana" />
-    <link rel="icon" type="image/x-icon" href="/src//favicon-32x32.png" />
+    <link rel="icon" type="image/x-icon" href="/src/favicon-32x32.png" />
   </head>
   <body>
-    <header class="hero">
+    <section class="hero">
       <div class="container">
         <div class="hero__content">
           <div class="hero__left">
-            <%- include('src/templates/menu.html') %>
-            <div class="hero__fill"></div>
+            <%- include('src/templates/header.html') %>
             <div class="hero__media">
-              <img src="/src/img/bg_cat.png" alt="bg_cat" class="hero__img" />
+              <div class="img">
+                <img src="/src/img/bg_cat.png" alt="bg_cat" class="hero__img" />
+              </div>
               <div class="hero__overlay">
                 <h2 class="hero__subtitle t-h2">
                   Why a mortgage is so much more than just a rate?
@@ -55,7 +56,6 @@
               alt="main-logo"
               class="hero__logo"
             />
-
             <h1 class="hero__title t-h1">
               Finding a mortgage is so <br /><span>much more</span> than
               <span>just a rate</span>
@@ -80,11 +80,23 @@
                 <a href="#"
                   ><button class="hero__btn btn--primary">
                     Get started
-                    <img
-                      src="/src/img/icons/icon__arrow.svg"
-                      alt=""
+                    <svg
                       class="btn__icon"
-                    /></button
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="12"
+                      viewBox="0 0 20 12"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M0.99999 6.83332C0.539753 6.83332 0.166656 6.46023 0.166656 5.99999C0.166656 5.53975 0.539753 5.16666 0.99999 5.16666H19C19.4602 5.16666 19.8333 5.53975 19.8333 5.99999C19.8333 6.46023 19.4602 6.83332 19 6.83332H0.99999Z"
+                        fill="currentColor"
+                      />
+                      <path
+                        d="M17.8215 5.99999L13.4107 1.58925C13.0853 1.26381 13.0853 0.736171 13.4107 0.410734C13.7362 0.0852973 14.2638 0.0852973 14.5893 0.410734L19.5893 5.41073C19.9147 5.73617 19.9147 6.26381 19.5893 6.58925L14.5893 11.5892C14.2638 11.9147 13.7362 11.9147 13.4107 11.5892C13.0853 11.2638 13.0853 10.7362 13.4107 10.4107L17.8215 5.99999Z"
+                        fill="currentColor"
+                      />
+                    </svg></button
                 ></a>
 
                 <a href="#"
@@ -97,7 +109,7 @@
           </div>
         </div>
       </div>
-    </header>
+    </sectiom>
     <script type="module" src="/src/js/script.js"></script>
   </body>
 </html>
