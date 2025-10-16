@@ -84,16 +84,16 @@
     pointer-events: all;
   }
   &__fill {
-    position: fixed; /* фиксируется по экрану */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.4); /* серый полупрозрачный */
-    opacity: 0; /* изначально скрыт */
-    pointer-events: none; /* не мешает кликам */
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    pointer-events: none;
     transition: opacity 0.3s ease;
-    z-index: 10; /* ниже меню */
+    z-index: 10;
   }
 }
 

@@ -23,19 +23,6 @@
     }
   }
 
-  &__fill {
-    position: fixed; /* фиксируется по экрану */
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.4); /* серый полупрозрачный */
-    opacity: 0; /* изначально скрыт */
-    pointer-events: none; /* не мешает кликам */
-    transition: opacity 0.3s ease;
-    z-index: 10; /* ниже меню */
-  }
-
   &__content {
     display: grid;
     grid-template-columns: 586px 706px;
