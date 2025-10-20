@@ -6,16 +6,6 @@
   &__play-btn {
     position: relative;
     z-index: 1;
-
-    &::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: 50%;
-      background: $blue;
-      animation: pulse 1.5s infinite;
-      z-index: -1;
-    }
   }
   &__buttons {
     a {
@@ -91,8 +81,8 @@
   &__actions-text {
     color: $dark-black;
     font-weight: 700;
-    font-size: 18px;
     line-height: normal;
+    opacity: 1;
   }
   &__buttons {
     display: flex;
@@ -114,9 +104,7 @@
     &__overlay {
       left: 0px;
     }
-    &__actions-text {
-      font-size: 18px;
-    }
+
     &__title {
       margin-top: 160px;
     }
@@ -153,9 +141,7 @@
     &__overlay {
       left: 0px;
     }
-    &__actions-text {
-      font-size: 15px;
-    }
+
     &__title {
       margin-top: 70px;
       font-size: 40px;

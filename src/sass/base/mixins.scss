@@ -4,7 +4,7 @@
   color: $black;
   font-style: normal;
   font-weight: 700;
-  line-height: 60px;
+  line-height: 35px;
 }
 
 @mixin descr {
@@ -12,16 +12,6 @@
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-}
-
-@mixin fluid-font($min, $middle, $max) {
-  font-size: clamp(
-    #{$min},
-    calc(
-      #{$middle} + (#{$max} - #{$middle}) * ((100vw - 1440px) / (1920 - 1440))
-    ),
-    #{$max}
-  );
 }
 
 @mixin button {
@@ -32,7 +22,7 @@
   border: none;
   border-radius: 4px;
   background: $blue;
-  color: #fff; // ← и текст, и стрелка (через currentColor)
+  color: #fff;
   font-size: 16px;
   font-weight: 700;
   line-height: 1;
@@ -43,13 +33,46 @@
 @mixin button-round {
   width: 44px;
   height: 44px;
-  border-radius: 100%;
-  background: $blue;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  align-items: center;
-  cursor: pointer;
+  border-radius: 50%;
   border: none;
+  cursor: pointer;
+  background: $blue;
+  position: relative;
+  padding: 0;
+  box-sizing: border-box;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -10px;
+    border-radius: 50%;
+    background: rgba($blue, 1);
+    animation: btn-pulse 1.3s ease-out infinite;
+    will-change: transform, opacity;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -40% -50%;
+    border-style: solid;
+    border-width: 7px 0 7px 10px;
+    border-color: transparent transparent transparent $white;
+    pointer-events: none;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      border: 1px solid rgba($white, 0.8);
+      background-color: $dark-blue;
+    }
+  }
+
+  &:active {
+    border: none;
+    background-color: $dark-blue;
+    color: $black;
+  }
 }
