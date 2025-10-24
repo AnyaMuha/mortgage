@@ -25,6 +25,10 @@
   @include button-round;
 }
 
+.btn--round-slider {
+  @include button-round-slider;
+}
+
 .btn--transparent {
   @include button;
   background-color: transparent;

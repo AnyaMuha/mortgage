@@ -14,6 +14,16 @@
   line-height: 24px;
 }
 
+@mixin fluid-font($min, $middle, $max) {
+  font-size: clamp(
+    #{$min},
+    calc(
+      #{$middle} + (#{$max} - #{$middle}) * ((100vw - 1440px) / (1920 - 1440))
+    ),
+    #{$max}
+  );
+}
+
 @mixin button {
   display: inline-flex;
   align-items: center;
@@ -74,5 +84,46 @@
     border: none;
     background-color: $dark-blue;
     color: $black;
+  }
+}
+
+@mixin button-round-slider {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: $white;
+  position: relative;
+  padding: 0;
+  box-sizing: border-box;
+  svg {
+    position: relative;
+    z-index: 1;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -10px;
+    border-radius: 50%;
+    background: rgba($white, 1);
+    animation: btn-pulse 1.3s ease-out infinite;
+    will-change: transform, opacity;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      border: 1px solid rgba($gray, 0.8);
+      background-color: rgb(215, 215, 215);
+    }
+  }
+
+  &:active {
+    border: none;
+    background-color: rgb(215, 215, 215);
+    color: $white;
   }
 }

@@ -1,6 +1,7 @@
 @use "/src/sass/base/variables.scss" as *;
 
 .journey {
+  overflow-x: clip;
   position: relative;
   padding: 104px 0px;
   &__subtitle {
@@ -169,6 +170,7 @@
     &:first-child::before {
       content: "";
       position: absolute;
+      top: 13px;
       height: 600px;
       width: 1px;
       background: repeating-linear-gradient(
