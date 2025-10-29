@@ -1,13 +1,12 @@
 @use "/src/sass/base/variables.scss" as *;
 
 .reviews {
-  overflow-x: clip;
+  overflow: visible;
   &__grid {
     position: relative;
     margin-top: 29px;
     display: grid;
-    align-items: end;
-
+    align-items: start;
     grid-template-columns: 387px 1fr;
     gap: 64px;
   }
@@ -170,10 +169,10 @@
   }
 
   &__slider {
-    height: 291px;
-    position: absolute;
+    height: auto;
+    position: relative;
     right: -100px;
-    bottom: 0px;
+    bottom: -35px;
     background-color: #126893;
     border-radius: 4px;
   }
@@ -185,7 +184,7 @@
   }
   &__swiper {
     width: 1300px;
-    height: 291px;
+    height: auto;
     position: relative;
     &-wrapper {
       position: absolute;
@@ -203,7 +202,7 @@
     align-items: center;
     bottom: 32px;
     width: 123px;
-    height: 291px;
+    // height: 291px;
     z-index: 10;
   }
   &__next {
@@ -277,7 +276,7 @@
       color: $blue;
     }
 
-    &-100 {
+    &-gray {
       fill: #e1e1e1;
     }
     &-star-half {
@@ -338,7 +337,7 @@
       row-gap: 32px; /* вертикальный промежуток */
     }
     .swiper-pagination-bullets.swiper-pagination-horizontal {
-      bottom: var(--swiper-pagination-bottom, 40px);
+      bottom: var(--swiper-pagination-bottom, 45px);
     }
   }
 }
@@ -357,6 +356,9 @@
       left: -50px;
       gap: 30px;
     }
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+      bottom: var(--swiper-pagination-bottom, 50px);
+    }
   }
 }
 
@@ -371,7 +373,7 @@
     .swiper {
       right: -60px;
       width: 405px;
-      bottom: -60px;
+      bottom: 0;
     }
     &__slider {
       margin-top: 50px;
@@ -450,7 +452,7 @@
     .swiper {
       right: -60px;
       width: 355px;
-      bottom: -40px;
+      bottom: 0;
     }
 
     &__buttons {
@@ -471,7 +473,7 @@
       width: 295px;
     }
     .swiper-pagination-bullets.swiper-pagination-horizontal {
-      bottom: var(--swiper-pagination-bottom, 35px);
+      bottom: var(--swiper-pagination-bottom, 40px);
     }
   }
 }

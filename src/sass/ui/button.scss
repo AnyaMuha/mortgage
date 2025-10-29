@@ -29,6 +29,10 @@
   @include button-round-slider;
 }
 
+.btn--round-see {
+  @include button-round-see;
+}
+
 .btn--transparent {
   @include button;
   background-color: transparent;

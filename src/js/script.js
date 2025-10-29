@@ -97,3 +97,24 @@ function updateCounter() {
 swiper.on("init", updateCounter);
 swiper.on("slideChange", updateCounter);
 if (swiper.initialized) updateCounter();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cols = document.querySelectorAll(".footer__col");
+
+  const isMobile = () => window.innerWidth <= 480;
+
+  const reset = () => cols.forEach((col) => col.classList.remove("is-open"));
+
+  cols.forEach((col) => {
+    const title = col.querySelector(".footer__title");
+    if (!title) return;
+
+    title.addEventListener("click", () => {
+      if (isMobile()) col.classList.toggle("is-open");
+    });
+  });
+
+  window.addEventListener("resize", () => {
+    if (!isMobile()) reset();
+  });
+});

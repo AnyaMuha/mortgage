@@ -127,3 +127,74 @@
     color: $white;
   }
 }
+
+@mixin button-round-see {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: $blue;
+  position: relative;
+  padding: 0;
+  box-sizing: border-box;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -10px;
+    border-radius: 50%;
+    background: rgba($blue, 1);
+    animation: btn-pulse 1.3s ease-out infinite;
+    will-change: transform, opacity;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      border: 1px solid rgba($white, 0.8);
+      background-color: $dark-blue;
+    }
+  }
+
+  &:active {
+    border: none;
+    background-color: $dark-blue;
+    color: $black;
+  }
+}
+
+@mixin education-card-hover {
+  background-color: #278fb4;
+  transform: scale(1.05);
+  transform-origin: bottom center;
+  transition: background-color 0.25s ease, transform 0.25s ease,
+    box-shadow 0.25s ease;
+  will-change: background-color, transform;
+  box-shadow: 0 22px 48px rgba(15, 108, 154, 0.28);
+  .label-hover {
+    color: $white;
+    opacity: 0.5;
+  }
+  .title-hover {
+    color: $white;
+    opacity: 1;
+  }
+  .text-hover {
+    color: $white;
+    opacity: 0.7;
+  }
+  .line-hover {
+    border: 1px solid $white;
+    opacity: 0.2;
+  }
+  .name-hover {
+    color: $white;
+    opacity: 1;
+    span {
+      opacity: 0.5;
+    }
+  }
+}
