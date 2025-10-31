@@ -1,5 +1,13 @@
 @use "/src/sass/base/variables.scss" as *;
 .hero {
+  &__head-logo {
+    top: 29px;
+    z-index: 100;
+    position: absolute;
+    left: 774px;
+    img {
+    }
+  }
   &__logo {
     display: none;
   }
@@ -116,6 +124,11 @@
 
 @media (max-width: 1200px) {
   .hero {
+    &__head-logo {
+      img {
+        display: none;
+      }
+    }
     &__actions {
       gap: 25px;
       &-text {

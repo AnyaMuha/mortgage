@@ -1,11 +1,11 @@
 @use "/src/sass/base/variables.scss" as *;
 .header {
-  &__logo {
+  &__logo-blog {
     img {
       top: 37px;
-      z-index: 100;
+      z-index: 0;
       position: absolute;
-      left: 774px;
+      left: 200px;
     }
   }
   &__burger {
@@ -99,9 +99,10 @@
 
 @media (max-width: 1440px) {
   .header {
-    &__logo {
+    &__logo-blog {
       img {
-        left: 624px;
+        top: 29px;
+        left: 100px;
       }
     }
     &__burger {
@@ -112,11 +113,6 @@
 
 @media (max-width: 1200px) {
   .header {
-    &__logo {
-      img {
-        left: 440px;
-      }
-    }
     &__burger {
       left: 25px;
     }
@@ -132,9 +128,9 @@
 
 @media (max-width: 950px) {
   .header {
-    &__logo {
+    &__logo-blog {
       img {
-        display: none;
+        left: 126px;
       }
     }
     &__burger {
@@ -164,6 +160,13 @@
 }
 @media (max-width: 500px) {
   .header {
+    &__logo-blog {
+      img {
+        top: 13px;
+        width: 150px;
+        left: 64px;
+      }
+    }
     &__burger {
       height: 35px;
       width: 35px;
