@@ -1,0 +1,302 @@
+@use "/src/sass/base/variables.scss" as *;
+.top {
+  position: relative;
+  margin-top: 88px;
+  background: $white;
+  &__banner {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 10px 20px -5px rgba(114, 168, 192, 0.15);
+  }
+  &__logo {
+    img {
+      position: absolute;
+      top: -55px;
+      left: 220px;
+    }
+  }
+}
+.header__logo-blog {
+  display: block;
+}
+.header__logo {
+  display: none;
+}
+
+@media (max-width: 1600px) {
+  .top {
+    &__logo {
+      img {
+        top: -60px;
+        left: 100px;
+      }
+    }
+  }
+}
+
+.videos {
+  padding: 48px 0 92.4px 0;
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    padding: 52px 37px 30px 37px;
+    border-radius: 4px;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    height: auto;
+    background: url("/src/img/video.png") center/cover no-repeat;
+    align-items: center;
+    &--featured {
+      grid-column: 1 / -1;
+      width: 100%;
+      height: auto;
+      padding: 146px 37px 130px 37px;
+    }
+  }
+  &__play {
+    background: $white;
+    width: 64px;
+    height: 64px;
+    &::before {
+      background: rgba($white, 1);
+    }
+    &::after {
+      border-width: 12px 0 12px 15px;
+      border-color: transparent transparent transparent $blue;
+    }
+  }
+  &__caption {
+    margin-top: 12px;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 37px;
+    text-align: center;
+    color: #ffffff;
+  }
+  &__time {
+    margin-top: 29px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #ffffff;
+  }
+}
+
+@media (max-width: 1600px) {
+  .videos {
+    &__play {
+      width: 44px;
+      height: 44px;
+    }
+    &__card {
+      padding: 52px 60px 30px 60px;
+    }
+    &__caption {
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 21px;
+    }
+    &__time {
+      margin-top: 22px;
+      font-size: 13px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .videos {
+    &__play {
+      width: 44px;
+      height: 44px;
+    }
+    &__card {
+      padding: 22px 20px 15px 20px;
+    }
+    &__caption {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    &__time {
+      margin-top: 15px;
+      font-size: 10px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .videos {
+    &__card {
+      padding: 32px 20px 15px 20px;
+    }
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .videos {
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    &__card {
+      padding: 22px 40px 15px 40px;
+    }
+    &__caption {
+      margin-top: 16px;
+      font-size: 18px;
+      line-height: 28px;
+    }
+    &__time {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+  }
+}
+
+.webinars {
+  padding: 0 0 90.4px 0;
+  &__resources {
+    &-wrapper {
+      margin-top: 24px;
+      display: flex;
+      max-width: 818px;
+      justify-content: flex-start;
+      gap: 24px;
+    }
+  }
+  &__label {
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $blue;
+  }
+  &__resource {
+    width: 100%;
+    min-height: 266px;
+    border-radius: 4px;
+    padding: 24px 32px 26px 32px;
+    background: $white;
+    box-shadow: 0px 27px 58px rgba(25, 78, 96, 0.139295);
+    &-line {
+      width: 100%;
+      margin-top: 20.4px;
+      opacity: 0.2;
+      border: 1px solid $dark-black;
+    }
+
+    &-cover-descr {
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      gap: 24px;
+    }
+    &-text {
+      display: flex;
+      flex-direction: column;
+    }
+    &-title {
+      margin-top: 17px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 26px;
+      color: $black;
+    }
+  }
+  &__button {
+    display: flex;
+    justify-content: right;
+    text-decoration: none;
+  }
+  &__btn {
+    margin-top: 24px;
+    right: 0;
+    svg {
+      position: relative;
+      z-index: 10;
+    }
+  }
+  &__btn--download {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 24px;
+    height: 48px;
+    border: 0;
+    border-radius: 9999px;
+    background: $blue;
+    color: #fff;
+    font: 700 16px/1 system-ui, sans-serif;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      pointer-events: none;
+      z-index: 0;
+      box-shadow: 0 0 0 0 rgba($blue, 0.35);
+      opacity: 0;
+      animation: none; // <— СБРОС: без анимации по умолчанию
+      will-change: box-shadow, opacity;
+    }
+
+    @media (hover: hover) {
+      &:hover::after,
+      &:focus-visible::after {
+        opacity: 1;
+        animation: education-ring-pulse 1.3s ease-out infinite;
+      }
+
+      &:hover svg,
+      &:focus-visible svg {
+        animation: icon-bounce 0.8s ease-in-out infinite;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .webinars {
+    &__resource {
+      &-label {
+        font-size: 11px;
+      }
+      &-title {
+        margin-top: 14px;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .webinars {
+    &__resources {
+      &-wrapper {
+        flex-direction: column;
+      }
+    }
+    &__resource {
+      &-label {
+        font-size: 15px;
+      }
+      &-title {
+        margin-top: 14px;
+        font-size: 18px;
+        line-height: 20px;
+      }
+    }
+  }
+}

@@ -2,6 +2,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 * {
@@ -45,7 +46,17 @@ body {
 }
 
 .container {
-  width: 100%;
-  padding-inline: clamp(20px, 7vw, 100px);
-  box-sizing: border-box;
+  padding-inline: 100px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding-inline: 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding-inline: 20px;
+  }
 }

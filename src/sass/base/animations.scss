@@ -1,10 +1,42 @@
-@keyframes pulse {
+@use "/src/sass/base/variables.scss" as *;
+
+@keyframes btn-pulse {
   0% {
-    transform: scale(1);
+    transform: scale(0.5);
     opacity: 1;
   }
   100% {
-    transform: scale(1.36);
+    transform: scale(1.1);
     opacity: 0;
+  }
+}
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes education-ring-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba($blue, 0.35);
+    opacity: 1;
+  }
+  100% {
+    box-shadow: 0 0 0 22px rgba($blue, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes icon-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
   }
 }

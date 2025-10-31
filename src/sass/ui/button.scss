@@ -3,40 +3,34 @@
 
 .btn--primary {
   @include button;
-  color: #fff;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  width: 200px;
-  height: 56px;
-
-  &:active {
-    border: none;
-    background-color: $dark-blue;
-    color: $black;
+  min-height: 56px;
+  .btn__icon {
+    flex: 0 0 auto;
+    width: 20px;
+    height: 12px;
+    transition: transform 0.3s ease;
   }
   @media (hover: hover) {
-    &:hover {
-      border: 1px solid rgba($black, 0.8);
-      background-color: $dark-blue;
+    &:hover .btn__icon {
+      transform: translateX(3px);
     }
+  }
+  &:active {
+    background: $dark-blue;
+    color: $black;
   }
 }
 
 .btn--round {
   @include button-round;
+}
 
-  &:active {
-    border: none;
-    background-color: $dark-blue;
-    color: $black;
-  }
-  @media (hover: hover) {
-    &:hover {
-      border: 1px solid rgba($white, 0.8);
-      background-color: $dark-blue;
-    }
-  }
+.btn--round-slider {
+  @include button-round-slider;
+}
+
+.btn--round-see {
+  @include button-round-see;
 }
 
 .btn--transparent {
@@ -59,6 +53,21 @@
     &:hover {
       border: 1px solid rgba($black, 0.8);
       background-color: rgba($gray, 0.1);
+    }
+  }
+}
+
+.btn--lets {
+  &:active {
+    background: $dark-blue;
+    color: $black;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      border: 1px solid rgba($dark-blue, 0.8);
+      background-color: rgba($dark-blue, 0.6);
+      color: $black;
     }
   }
 }

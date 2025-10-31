@@ -1,0 +1,214 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.getting {
+  padding: 104px 76px 0 76px;
+  &__title {
+    text-align: center;
+  }
+  &__subtitle {
+    margin-top: 22px;
+    text-align: center;
+  }
+  &__wrapper {
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 104px;
+    justify-content: center;
+  }
+  &__card {
+    max-width: 612px;
+    position: relative;
+    &-bot {
+      padding: 0 32px 30px 32px;
+      box-shadow: 0px 27px 58px #194d6023;
+    }
+    &-name-descr {
+      .name-meet {
+        padding-top: 28px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 11px;
+        line-height: 13px;
+        text-transform: uppercase;
+        color: $blue;
+      }
+      .name-person {
+        margin-top: 5px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 28px;
+        color: $black;
+      }
+      .descr {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: $dark-black;
+        opacity: 0.5;
+        &::before {
+          content: "";
+          display: block;
+          width: 40px;
+          height: 2px;
+          background-color: $gray;
+          opacity: 0.2;
+          margin: 19px 0 19px 0;
+        }
+      }
+    }
+    &-skills {
+      .subtitle {
+        margin-top: 25px;
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 700;
+        line-height: 28px;
+        color: $black;
+        &::after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 2px;
+          background-color: $gray;
+          opacity: 0.2;
+          margin: 19px 0 19px 0;
+        }
+      }
+      .skills-items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+      }
+      .item {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        max-width: 65px;
+      }
+      .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 49px;
+        height: 48px;
+        background: #fcfcfc;
+        border: 1px solid #e8e8e8;
+        border-radius: 100%;
+      }
+      .txt {
+        margin-top: 8px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 14px;
+        text-align: center;
+        color: $dark-black;
+      }
+    }
+  }
+  &__card-img {
+    overflow: hidden;
+    height: 220px;
+    position: relative;
+    left: 10px;
+  }
+  &__foto-btn {
+    position: relative;
+  }
+  &__card-btn-txt {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    top: 83px;
+    right: 50px;
+  }
+  &__play-btn {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 1600px) {
+  .getting {
+    &__wrapper {
+      gap: 55px;
+    }
+    &__card {
+      max-width: 509px;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .getting {
+    &__wrapper {
+      gap: 40px;
+    }
+    &__play-btn {
+      height: 35px;
+      width: 35px;
+    }
+    &__subtitle {
+      margin-top: 0;
+    }
+    &__card {
+      max-width: 350px;
+      &-bot {
+        padding: 0 22px 20px 22px;
+      }
+      &-btn-txt {
+        gap: 10px;
+        .txt {
+          font-size: 14px;
+        }
+      }
+      .skills-items {
+        gap: 20px;
+        justify-content: space-between;
+      }
+      &-btn-txt {
+        right: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .getting {
+    padding: 30px 10px 0 10px;
+    &__wrapper {
+      column-gap: 20px;
+    }
+    &__card {
+      max-width: 300px;
+
+      &-bot {
+        padding: 0 20px 20px 20px;
+      }
+      .skills-items {
+        gap: 7px;
+      }
+      &-btn-txt {
+        flex-direction: column;
+        top: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .getting {
+    padding: 30px 0 0 0;
+    &__wrapper {
+      row-gap: 50px;
+    }
+
+    &__subtitle {
+      margin-top: 20px;
+    }
+  }
+}
