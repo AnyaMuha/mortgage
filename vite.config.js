@@ -11,6 +11,8 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, "index.html"),
         blog: resolve(__dirname, "blog.html"),
+        ebook: resolve(__dirname, "ebook.html"),
+        ebook: resolve(__dirname, "webinar.html"),
       },
     },
   },

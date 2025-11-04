@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ebook</title>
+    <meta name="description" content="mortgage" />
+    <meta name="author" content="Ana" />
+    <link rel="icon" type="image/x-icon" href="/src/favicon-32x32.png" />
+  </head>
+  <body class="page--ebook">
+    <%- include('src/templates/header.html') %>
+
+    <section class="ebook">
+      <div class="container">
+        <img src="/src/img/bg_ebook.png" alt="bg" class="ebook__img-bg" />
+
+        <div class="ebook__grid">
+          <div class="ebook__media">
+            <img
+              src="/src/img/book__xl.png"
+              alt="9 Things "
+              class="ebook__img"
+            />
+          </div>
+
+          <div class="ebook__content">
+            <div class="ebook__name">
+              <h1 class="ebook__title t-h1">
+                9 Things You Must Know About Buying Your First Home
+              </h1>
+              <div class="ebook__by-btn">
+                <div class="ebook__author">Scott Johnson</div>
+                <div class="ebook__icons">
+                  <div class="ebook__icon">PDF</div>
+                  <div class="ebook__icon">ePUB</div>
+                </div>
+              </div>
+            </div>
+            <div class="ebook__about">
+              <div class="ebook__about-title">About the book</div>
+              <p class="ebook__text">
+                So you’re about to get into the world of homeownership. It’s
+                okay...everyone feels lost during this process, but the more
+                preparation you do upfront, the smoother your journey will be.
+              </p>
+              <form class="ebook__form">
+                <input
+                  type="email"
+                  class="ebook__input"
+                  placeholder="Your Email"
+                  required
+                />
+                <button type="submit" class="ebook__btn btn">
+                  Get the eBook
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <%- include('src/templates/report-author-started.html') %> <%-
+    include('src/templates/footer.html') %>
+    <script type="module" src="/src/js/script.js"></script>
+  </body>
+</html>
