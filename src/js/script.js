@@ -35,6 +35,18 @@ overlay?.addEventListener("click", closeMenu);
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeMenu();
 });
+// Закрыть меню при клике на ссылку
+const menuLinks = document.querySelectorAll(".header__menu-link");
+
+menuLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    // Проверяем: если это ссылка внутри страницы (начинается с #)
+    const href = link.getAttribute("href");
+    if (href && href.startsWith("#")) {
+      closeMenu(); // закрываем меню
+    }
+  });
+});
 
 // шаги
 const dots = document.querySelectorAll(".journey__dot");
