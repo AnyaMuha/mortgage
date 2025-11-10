@@ -18,6 +18,10 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto auto;
   }
+  &__article-link {
+    text-decoration: none;
+    grid-column: 1 / -1;
+  }
 
   &__resources {
     &-wrapper {
@@ -128,7 +132,6 @@
   }
   &__article--large {
     padding: 28px 32px 32px 32px;
-    grid-column: 1 / -1;
     background: url("/src/img/bg_education.png") center/cover no-repeat;
     @media (hover: hover) {
       &:hover {

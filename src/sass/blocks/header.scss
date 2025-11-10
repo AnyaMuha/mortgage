@@ -2,8 +2,9 @@
 .header {
   &__logo-blog {
     img {
-      top: 37px;
-      z-index: 0;
+      display: none;
+      z-index: 1;
+      top: 30px;
       position: absolute;
       left: 200px;
     }

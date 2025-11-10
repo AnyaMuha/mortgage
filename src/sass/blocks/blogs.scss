@@ -1,6 +1,9 @@
 @use "/src/sass/base/variables.scss" as *;
 @use "/src/sass/base/mixins.scss" as *;
 
+.page--blog .header__logo-blog img {
+  display: block;
+}
 .blogs {
   padding: 0 0 96px 0;
   &__grid {

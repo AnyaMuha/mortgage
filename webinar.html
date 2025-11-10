@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webinar</title>
+    <meta name="description" content="mortgage" />
+    <meta name="author" content="Ana" />
+    <link rel="icon" type="image/x-icon" href="/src/favicon-32x32.png" />
+  </head>
+  <body class="page--webinar">
+    <%- include('src/templates/header.html') %>
+
+    <section class="webinar">
+      <div class="container">
+        <div class="webinar__grid">
+          <div class="webinar__content">
+            <h1 class="webinar__title t-h1">Webinar name</h1>
+            <div class="webinar__name-author">Scott Johnson</div>
+            <p class="webinar__text">
+              So you’re about to get into the world of homeownership. It’s
+              okay...everyone feels lost during this process, but the more
+              preparation you do upfront, the smoother your journey will be.
+            </p>
+            <form class="webinar__form">
+              <input
+                type="email"
+                class="webinar__input"
+                placeholder="Your Email"
+                required
+              />
+              <button type="submit" class="webinar__btn btn">
+                Get the eBook
+              </button>
+            </form>
+            <div class="webinar__solid"></div>
+          </div>
+          <div class="webinar__media">
+            <div class="webinar__card-btn-txt">
+              <a
+                href="https://youtu.be/KnkDoy_TCiM?si=5NXhyFLYRuh6QtBm"
+                class="webinar__btn-round"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><button
+                  class="webinar__play-btn btn--round"
+                  type="button"
+                  aria-label="Play video"
+                ></button
+              ></a>
+              <div class="webinar__play-txt">Play demo (1:34)</div>
+            </div>
+            <img
+              src="/src/img/top-macbook.png"
+              alt="note"
+              class="webinar__img"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <%- include('src/templates/report-author-started.html') %> <%-
+    include('src/templates/footer.html') %>
+
+    <script type="module" src="/src/js/script.js"></script>
+  </body>
+</html>
